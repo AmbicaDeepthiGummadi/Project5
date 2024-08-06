@@ -1,0 +1,83 @@
+<html>
+<head>
+    <title>UI Pages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Mystyles2.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+    .body {display: flex;align-items: center;justify-content: center;
+    font-family: sans-serif;line-height: 1.5;min-height: 50vh;
+    background: #fff;flex-direction: column;margin-left: 33%;margin-right: 33%;}
+    .main {border-radius: 15px;background:radial-gradient(circle,rgb(0, 255, 234),bisque,rgb(0, 255, 191));
+        box-shadow: 10px 10px 10px hotpink;padding: 10px 20px;
+    transition: transform 0.2s;width: 500px;text-align: center;}
+    h1 {color: #4CAF50;}
+    label { display: block;width: 100%;margin-top: 10px;margin-bottom: 5px;
+    text-align: left;color: #555;font-weight: bold;}
+    input {display: block;width: 100%;margin-bottom: 15px;padding: 10px;
+            box-sizing: border-box;border: 1px solid #ddd;border-radius: 5px;}
+    button { padding: 15px; border-radius: 10px;margin-top: 15px;margin-bottom: 15px;
+     border: none;color: white; cursor: pointer;background-color: #4CAF50; width: 100%;font-size: 16px;}
+    .wrap {display: flex;justify-content: center;align-items: center; }
+    body{background-image: url("d3.jpg");}
+    @media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+    </style>
+</head>
+<body class="container">
+    <script>
+        function validate()
+        {
+            var name=document.myform.name.value;
+            var pw=document.myform.password.value;
+            if(name=="" || name==null)
+            {
+                  alert("Enter user name");
+                  return false;
+            }
+            if(pw=="" || pw==null)
+            {
+                alert("Enter password");
+                return false;
+            }
+            return true
+        }
+    </script>
+    <header align="right">
+        <img src="logo.png" alt="Logo" class="logo" align="left">
+        <nav>
+            <ul>
+                <li><a href=".\Home.html">Home</a></li>
+                <li><a href=".\About.html">About</a></li>
+                <li><a href=".\Contactus.html">Contact Us</a></li>
+                <li><a href=".\Registrationpage.html">Register</a></li>
+                <li><a href=".\Loginpage.html">Login</a></li>
+            </ul>
+        </nav>
+    </header><br><br>
+    <h2 align="center">Login Form:</h2>
+        <div class="body">
+            <div class="main">
+                <h3>Enter your login credentials</h3>
+                <form action="Loginsuccess.html"name="myform" onsubmit="return validate(this)">
+                    <span  class="input-group-addon"><i class="glyphicon glyphicon-user"></i>
+                    <label for="first">Username:</label>
+                    <input type="text" id="first" name="name" placeholder="Enter your Username"></span><br>
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="pass" placeholder="Enter your Password" required></span><br>
+                    <div class="wrap"><button type="submit" class="btn btn-success">Submit</button></div>
+                </form>
+                <p>Not registered?<a href="Registrationpage.html" style="text-decoration: none;">Create an account</a></p>
+        </div></div>
+    <footer style="margin-top: 15%; width : 100%">
+        <p><b>&copy; 2024 MyBakery.All rights reserved</b></p>
+    </footer>
+</body>
+</html>
